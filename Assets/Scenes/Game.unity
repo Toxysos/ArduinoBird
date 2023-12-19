@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7423095}
+  - component: {fileID: 7423096}
   m_Layer: 0
   m_Name: Serial
   m_TagString: Untagged
@@ -154,6 +155,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7423096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eb8c17fb428d144bafa48e8e57d4680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serialPort: COM1
+  baudrate: 115200
 --- !u!1 &1925463081
 GameObject:
   m_ObjectHideFlags: 0

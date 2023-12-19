@@ -11,10 +11,6 @@ public class SerialHandler : MonoBehaviour
     [SerializeField] private string serialPort = "COM1";
     [SerializeField] private int baudrate = 115200;
     
-    [SerializeField] private Component river;
-    private Rigidbody2D _riverRigidbody2D;
-    private SpriteRenderer _riverSprite;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +20,6 @@ public class SerialHandler : MonoBehaviour
         // Once configured, the serial communication must be opened just like a file : the OS handles the communication.
         _serial.Open();
         
-        _riverRigidbody2D = river.GetComponentInParent<Rigidbody2D>();
-        _riverSprite = river.GetComponentInParent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -41,17 +35,6 @@ public class SerialHandler : MonoBehaviour
         
         Debug.Log("Message received: " + message);
 
-        switch (message)
-        {
-            case "dry":
-                _riverRigidbody2D.simulated = false;
-                _riverSprite.color = new Color32(146,108,77,255);
-                break;
-            case "wet":
-                _riverRigidbody2D.simulated = true;
-                _riverSprite.color = new Color32(16,107,255,255);
-                break;
-        }
     }
 
     public void SetLed(bool newState)
