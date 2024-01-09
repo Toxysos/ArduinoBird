@@ -167,8 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb8c17fb428d144bafa48e8e57d4680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serialPort: COM1
-  baudrate: 115200
+  serialPort: COM12
+  baudrate: 9600
 --- !u!1 &1925463081
 GameObject:
   m_ObjectHideFlags: 0
